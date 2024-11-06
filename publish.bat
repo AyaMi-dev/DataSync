@@ -3,7 +3,7 @@
 :: GitHub 토큰과 리포지토리 URL 설정
 set "GITHUB_TOKEN=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"
 set "REPO_URL=https://%GITHUB_TOKEN%@github.com/AyaKanaKR/DataSync.git"
-// https://%GITHUB_TOKEN%@github.com/AyaKanaKR/DataSync.git
+
 
 git init
 
@@ -14,7 +14,11 @@ git remote add origin %REPO_URL%
 
 :: 변경 사항 추가
 git add .
+git push --force origin master
+git add origin %REPO_URL%
+
 git reset -- .kotlin .idea .gradle
+
 
 :: 커밋을 시도하고 실패 시 무시
 git commit -m "Automated commit and push by gitPublish task" || echo "Nothing to commit, skipping push."

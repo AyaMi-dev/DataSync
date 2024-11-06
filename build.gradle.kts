@@ -53,5 +53,6 @@ tasks.register<Exec>("gitPublish") {
     group = "upload"
     description = "GitHub에 커밋하고 푸시합니다."
 
-    commandLine("cmd", "/c", "publish.bat")
+    commandLine("cmd","/c", "publish.bat"
+    )
 }
