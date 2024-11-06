@@ -12,6 +12,19 @@ plugins {
 group = "kr.awr.kdv.ls"
 version = "1.21.1-R0.1-SNAPSHOT"
 
+
+val versionFile = file("version.txt")
+var versionNumber: String
+
+if (versionFile.exists()) {
+    versionNumber = versionFile.readText().trim()
+} else {
+    versionNumber = "1.0.0" // 파일이 없으면 기본값 설정
+}
+
+// Gradle 버전 설정
+version = versionNumber
+
 repositories {
     mavenCentral()
     maven("https://repo.papermc.io/repository/maven-public/") {
@@ -44,6 +57,10 @@ val generateTemplates = tasks.register<Copy>("generateTemplates") {
     expand(props)
 }
 
+
+tasks.build {
+    dependsOn("incrementVersion") // 빌드 전에 버전 증가 작업 실행
+}
 sourceSets.main.configure { java.srcDir(generateTemplates.map { it.outputs }) }
 
 project.idea.project.settings.taskTriggers.afterSync(generateTemplates)
