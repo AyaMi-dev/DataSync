@@ -61,6 +61,19 @@ val generateTemplates = tasks.register<Copy>("generateTemplates") {
 tasks.build {
     dependsOn("incrementVersion") // 빌드 전에 버전 증가 작업 실행
 }
+
+tasks.register("incrementVersion") {
+    doLast {
+        val versionParts = versionNumber.split(".").map { it.toInt() }.toMutableList()
+        versionParts[2] += 1 // 패치 버전 증가
+        versionNumber = versionParts.joinToString(".")
+        version = versionNumber
+
+        // 버전 파일에 새 버전 쓰기
+        versionFile.writeText(versionNumber)
+        println("Version updated to $versionNumber")
+    }
+}
 sourceSets.main.configure { java.srcDir(generateTemplates.map { it.outputs }) }
 
 project.idea.project.settings.taskTriggers.afterSync(generateTemplates)
