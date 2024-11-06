@@ -33,12 +33,17 @@ repositories {
     maven("https://oss.sonatype.org/content/groups/public/") {
         name = "sonatype"
     }
+    maven("https://repo.dmulloy2.net/repository/public/")
 }
 
 dependencies {
+    //  compileOnly group: "com.comphenix.protocol", name: "ProtocolLib", version: "4.8.0";
+    compileOnly ("com.comphenix.protocol:ProtocolLib:5.1.0")
     compileOnly("com.velocitypowered:velocity-api:3.3.0-SNAPSHOT")
     kapt("com.velocitypowered:velocity-api:3.3.0-SNAPSHOT")
+    implementation("com.google.code.gson:gson:2.10.1")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    annotationProcessor("com.velocitypowered:velocity-api:3.2.0-SNAPSHOT")
 }
 
 val targetJavaVersion = 17
