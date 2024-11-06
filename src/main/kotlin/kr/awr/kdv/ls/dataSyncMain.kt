@@ -19,6 +19,8 @@ import com.velocitypowered.api.plugin.Plugin
 import org.slf4j.Logger
 
 
+
+
 @Plugin(
     id = "datasync",
     name = "DataSync",
@@ -27,6 +29,8 @@ import org.slf4j.Logger
     url = "https://github.com/AyaKanaKR/DataSync",
     authors = ["AyaK_"]
 )
+
+
 class dataSyncMain @Inject constructor(val logger: Logger) {
 
     @Subscribe
@@ -37,6 +41,7 @@ class dataSyncMain @Inject constructor(val logger: Logger) {
         logger.info("GitHub: https://github.com/AyaKanaKR/DataSync")
         logger.info("Description: Sharing data between servers")
         logger.info("================================")
+
     }
 
 

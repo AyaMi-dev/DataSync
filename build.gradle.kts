@@ -26,25 +26,27 @@ if (versionFile.exists()) {
 version = versionNumber
 
 repositories {
-    mavenCentral()
-    maven("https://repo.papermc.io/repository/maven-public/") {
-        name = "papermc-repo"
-    }
-    maven("https://oss.sonatype.org/content/groups/public/") {
-        name = "sonatype"
-    }
+    maven("https://repo.papermc.io/repository/maven-public/")   
+    maven("https://oss.sonatype.org/content/groups/public/")
     maven("https://repo.dmulloy2.net/repository/public/")
+
+    mavenCentral()
 }
+
 
 dependencies {
     //  compileOnly group: "com.comphenix.protocol", name: "ProtocolLib", version: "4.8.0";
     compileOnly ("com.comphenix.protocol:ProtocolLib:5.1.0")
     compileOnly("com.velocitypowered:velocity-api:3.3.0-SNAPSHOT")
     kapt("com.velocitypowered:velocity-api:3.3.0-SNAPSHOT")
+    compileOnly("org.spigotmc:spigot-api:1.21.1-R0.1-SNAPSHOT")
     implementation("com.google.code.gson:gson:2.10.1")
+
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     annotationProcessor("com.velocitypowered:velocity-api:3.2.0-SNAPSHOT")
 }
+
+
 
 val targetJavaVersion = 17
 kotlin {
