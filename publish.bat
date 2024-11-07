@@ -2,7 +2,7 @@
 
 :: GitHub 토큰과 리포지토리 URL 설정
 set "GITHUB_TOKEN=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"
-set "REPO_URL=https://%GITHUB_TOKEN%@github.com/AyaKanaKR/DataSync.git"
+set "REPO_URL=https://%GITHUB_TOKEN%@github.com/AyaMi-dev/DataSync.git"
 
 :: Git 초기화
 git init
