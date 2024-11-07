@@ -1,5 +1,5 @@
 /*
- * Copyright © 2024 AyaK_
+ * © 2024 AyaK_.
  *
  * All rights reserved. This software, including but not limited to the code, design, and related assets, is the intellectual property of AyaK_. Unauthorized duplication, modification, distribution, or use of this software without explicit permission from AyaK_ is strictly prohibited.
  *
