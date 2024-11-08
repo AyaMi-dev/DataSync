@@ -11,7 +11,7 @@
 
 package kr.awr.kdv.ls.configuration
 
-interface SendData  {
+interface SendData {
 
     fun sendData(serverType: ServerType, data: Any)
     fun sendData(serverType: ServerType)
@@ -20,6 +20,5 @@ interface SendData  {
     fun sendData(serverType: ServerType, data: Any, callback: () -> Unit)
     fun sendData(serverType: ServerType, callback: () -> Unit)
     fun sendData(data: Any, callback: () -> Unit)
-
-
+    fun sendAllData(serverType: ServerType, data: Any)
 }

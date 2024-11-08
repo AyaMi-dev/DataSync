@@ -18,7 +18,7 @@ git reset -- .kotlin .idea .gradle
 
 :: 변경 사항 추가 및 커밋
 git add .
-git commit -m "◆1.21.1 Update" || echo "Nothing to commit, skipping push."
+git commit -m "◆ 1.21.1 Update" || echo "Nothing to commit, skipping push."
 
 :: 푸시 시도 (오류 메시지 표시)
 git push --force origin master || echo "Push failed, check your permissions."
