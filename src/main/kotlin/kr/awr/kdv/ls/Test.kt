@@ -14,36 +14,13 @@ package kr.awr.kdv.ls
 import kr.awr.kdv.ls.configuration.SendData
 import kr.awr.kdv.ls.configuration.ServerType
 
-class Test : SendData {
-    override fun sendData(serverType: ServerType, data: Any) {
-        TODO("Not yet implemented")
-    }
+class Test  {
 
-    override fun sendData(serverType: ServerType) {
-        TODO("Not yet implemented")
-    }
 
-    override fun sendData(data: Any) {
-        TODO("Not yet implemented")
-    }
+    val server2: ServerType = ServerType.BLOCK
 
-    override fun sendData() {
-        TODO("Not yet implemented")
-    }
 
-    override fun sendData(serverType: ServerType, data: Any, callback: () -> Unit) {
-        TODO("Not yet implemented")
-    }
-
-    override fun sendData(serverType: ServerType, callback: () -> Unit) {
-        TODO("Not yet implemented")
-    }
-
-    override fun sendData(data: Any, callback: () -> Unit) {
-        TODO("Not yet implemented")
-    }
-
-    override fun sendAllData(serverType: ServerType, data: Any) {
-        TODO("Not yet implemented")
+    override fun toString(): String {
+        return super.toString()
     }
 }
